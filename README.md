@@ -52,7 +52,7 @@ Exemplo de erro:
 | `OPENWEATHER_API_KEY` | Autenticar a chamada ao OpenWeather | Variável de ambiente da instância n8n |
 | `TELEGRAM_BOT_TOKEN` | Criar a credencial do bot | Credencial **Telegram API** no n8n; nunca inserir no JSON |
 
-O arquivo exportado não contém chaves, tokens ou outros segredos. Ele contém somente uma referência à credencial chamada `Telegram Bot` e a expressão `{{ $env.OPENWEATHER_API_KEY }}`.
+O arquivo exportado não contém chaves, tokens ou outros segredos. Ele contém somente uma referência à credencial chamada `Telegram account` e a expressão `{{ $env.OPENWEATHER_API_KEY }}`.
 
 ## 1. Configurar a chave do OpenWeather
 
@@ -88,7 +88,7 @@ TELEGRAM_BOT_TOKEN=seu-token-aqui
 3. Guarde o token recebido em local seguro.
 4. No n8n, acesse **Credentials** e crie uma credencial do tipo **Telegram API**.
 5. Cole o valor de `TELEGRAM_BOT_TOKEN` no campo **Access Token**.
-6. Nomeie a credencial como `Telegram Bot`.
+6. Nomeie a credencial como `Telegram account`.
 
 Não publique o token no GitHub. Se um token for exposto, revogue-o imediatamente no BotFather e gere outro.
 
@@ -98,7 +98,7 @@ Não publique o token no GitHub. Se um token for exposto, revogue-o imediatament
 2. No n8n, crie um workflow e escolha **Import from File**.
 3. Selecione `workflow-chatbot-telegram.json`.
 4. Abra os nós `Telegram Trigger`, `Enviar temperatura` e `Enviar erro`.
-5. Selecione a credencial `Telegram Bot` nos três nós.
+5. Selecione a credencial `Telegram account` nos três nós.
 6. Salve o workflow.
 
 ## 4. Testar e ativar
